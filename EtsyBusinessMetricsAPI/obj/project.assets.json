@@ -636,23 +636,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\cerny\\.nuget\\packages\\": {},
+    "C:\\Users\\Ricky\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cerny\\DevelopmentProjects\\EtsyBusinessMetricsAPI\\EtsyBusinessMetricsAPI\\EtsyBusinessMetricsAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Ricky\\source\\repos\\EtsyBusinessMetricsAPI\\EtsyBusinessMetricsAPI\\EtsyBusinessMetricsAPI.csproj",
       "projectName": "EtsyBusinessMetricsAPI",
-      "projectPath": "C:\\Users\\cerny\\DevelopmentProjects\\EtsyBusinessMetricsAPI\\EtsyBusinessMetricsAPI\\EtsyBusinessMetricsAPI.csproj",
-      "packagesPath": "C:\\Users\\cerny\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cerny\\DevelopmentProjects\\EtsyBusinessMetricsAPI\\EtsyBusinessMetricsAPI\\obj\\",
+      "projectPath": "C:\\Users\\Ricky\\source\\repos\\EtsyBusinessMetricsAPI\\EtsyBusinessMetricsAPI\\EtsyBusinessMetricsAPI.csproj",
+      "packagesPath": "C:\\Users\\Ricky\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ricky\\source\\repos\\EtsyBusinessMetricsAPI\\EtsyBusinessMetricsAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\cerny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ricky\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
