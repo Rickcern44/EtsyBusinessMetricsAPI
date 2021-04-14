@@ -39,23 +39,27 @@ namespace EtsyBusinessMetricsAPI.Controllers
         }
 
         // POST api/<PurchaseController>
-        [HttpPut("create")]
+        [HttpPut("Create")]
         public void CreateNewPurchase(CreatePurchase purchase)
         {
             purchaseDataAccess.CreatePurchase(purchase);
         }
 
         // PUT api/<PurchaseController>/5
-        [HttpPut("update")]
+        [HttpPut("Update")]
         public void Put(UpdatePurchase purchase)
         {
             purchaseDataAccess.UpdatePurchase(purchase);
         }
 
-        // DELETE api/<PurchaseController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        /// <summary>
+        /// Delete a purchase by ID 
+        /// </summary>
+        /// <param name="purchaseId"> The PurchaseId</param>
+        [HttpDelete("{purchaseId}")]
+        public void Delete(int purchaseId)
         {
+            purchaseDataAccess.DeleteAPurchase(purchaseId);
         }
     }
 }

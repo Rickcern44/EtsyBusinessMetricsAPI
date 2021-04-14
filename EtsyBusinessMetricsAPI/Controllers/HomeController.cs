@@ -23,7 +23,7 @@ namespace EtsyBusinessMetricsAPI.Controllers
         /// This function calls the DB and gets tge total of all Etsy Sales.
         /// </summary>
         /// <returns>Returns the total of all Etsy Sales</returns>
-        [HttpGet("total")]
+        [HttpGet("Total")]
         public decimal GetTotalSales()
         {
             return saleDataAcess.GetSumOfSales();
@@ -33,7 +33,7 @@ namespace EtsyBusinessMetricsAPI.Controllers
         /// This method gets the sum of the total purchases for the Main Dashboard
         /// </summary>
         /// <returns> A Decimal</returns>
-        [HttpGet("totalpurchases")]
+        [HttpGet("TotalPurchases")]
         public decimal GetTotalPurchases()
         {
             return purchaseDataAccess.GetTotalPurchases();

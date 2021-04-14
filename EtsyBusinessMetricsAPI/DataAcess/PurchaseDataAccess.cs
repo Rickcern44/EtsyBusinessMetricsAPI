@@ -114,6 +114,28 @@ namespace EtsyBusinessMetricsAPI.DataAcess
             }
         }
 
+        public void DeleteAPurchase(int purchaseId)
+        {
+            const string query = @"DELETE Purchase Where PurchaseId = @purchaseId";
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@purchaseId", purchaseId);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex.Message); ;
+            }
+
+        }
+
         private DetailedPurchase PurchaseDataAdpater(SqlDataReader reader)
         {
             DetailedPurchase purchase = new DetailedPurchase();
