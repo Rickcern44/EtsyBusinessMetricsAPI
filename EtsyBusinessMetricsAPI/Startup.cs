@@ -37,6 +37,7 @@ namespace EtsyBusinessMetricsAPI
 
             services.AddTransient<ISaleDataAcess>(m => new SaleDataAcess(connectionString));
             services.AddTransient<IPurchaseDataAccess>(m => new PurchaseDataAccess(connectionString));
+            services.AddTransient<ISupplyDataAccess>(m => new SupplyDataAccess(connectionString));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -40,9 +40,20 @@ namespace EtsyBusinessMetricsAPI.Controllers
 
         // POST api/<PurchaseController>
         [HttpPut("Create")]
-        public void CreateNewPurchase(CreatePurchase purchase)
+        public ActionResult CreateNewPurchase(CreatePurchase purchase)
         {
-            purchaseDataAccess.CreatePurchase(purchase);
+            List<DetailedPurchase> purchaseCount = purchaseDataAccess.GetAllPurchases();
+
+            if (purchaseCount.Count() > purchase.SupplyId)
+            {
+                return Conflict();
+            }
+            else
+            {
+                purchaseDataAccess.CreatePurchase(purchase);
+                return Ok();
+            }
+            
         }
 
         // PUT api/<PurchaseController>/5
