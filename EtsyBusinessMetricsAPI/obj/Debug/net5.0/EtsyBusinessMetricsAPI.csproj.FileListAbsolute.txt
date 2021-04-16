@@ -5,7 +5,6 @@ C:\Users\Ricky\source\repos\EtsyBusinessMetricsAPI\EtsyBusinessMetricsAPI\obj\De
 C:\Users\Ricky\source\repos\EtsyBusinessMetricsAPI\EtsyBusinessMetricsAPI\obj\Debug\net5.0\EtsyBusinessMetricsAPI.csproj.CoreCompileInputs.cache
 C:\Users\Ricky\source\repos\EtsyBusinessMetricsAPI\EtsyBusinessMetricsAPI\obj\Debug\net5.0\EtsyBusinessMetricsAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Ricky\source\repos\EtsyBusinessMetricsAPI\EtsyBusinessMetricsAPI\obj\Debug\net5.0\EtsyBusinessMetricsAPI.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Ricky\source\repos\EtsyBusinessMetricsAPI\EtsyBusinessMetricsAPI\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\Ricky\source\repos\EtsyBusinessMetricsAPI\EtsyBusinessMetricsAPI\bin\Debug\net5.0\appsettings.json
 C:\Users\Ricky\source\repos\EtsyBusinessMetricsAPI\EtsyBusinessMetricsAPI\bin\Debug\net5.0\EtsyBusinessMetricsAPI.exe
 C:\Users\Ricky\source\repos\EtsyBusinessMetricsAPI\EtsyBusinessMetricsAPI\bin\Debug\net5.0\EtsyBusinessMetricsAPI.deps.json
