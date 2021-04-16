@@ -15,12 +15,10 @@ namespace EtsyBusinessMetricsAPI.Controllers
     {
         private ISaleDataAcess saleDataAcess;
         private IPurchaseDataAccess purchaseDataAccess;
-        private ISupplyDataAccess supplyDataAccess;
-        public PurchaseController(ISaleDataAcess saleDataAccess, IPurchaseDataAccess purchaseDataAccess, ISupplyDataAccess supplyDataAccess)
+        public PurchaseController(ISaleDataAcess saleDataAccess, IPurchaseDataAccess purchaseDataAccess)
         {
             this.saleDataAcess = saleDataAccess;
             this.purchaseDataAccess = purchaseDataAccess;
-            this.supplyDataAccess = supplyDataAccess;
         }
         /// <summary>
         /// This is a method to get a list of detailed purchases.
@@ -44,9 +42,9 @@ namespace EtsyBusinessMetricsAPI.Controllers
         [HttpPut("Create")]
         public ActionResult CreateNewPurchase(CreatePurchase purchase)
         {
-            int supplyCount = supplyDataAccess.GetSupplyCount();
-            
-            if (purchase.SupplyId > supplyCount)
+            List<DetailedPurchase> purchaseCount = purchaseDataAccess.GetAllPurchases();
+
+            if (purchaseCount.Count() > purchase.SupplyId)
             {
                 return Conflict();
             }
