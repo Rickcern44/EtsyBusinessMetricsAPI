@@ -1,3 +1,4 @@
+C:\Users\Ricky\source\repos\EtsyBusinessMetricsAPI\EtsyBusinessMetricsAPI\obj\Debug\net5.0\EtsyBusinessMetricsAPI.csprojAssemblyReference.cache
 C:\Users\Ricky\source\repos\EtsyBusinessMetricsAPI\EtsyBusinessMetricsAPI\obj\Debug\net5.0\EtsyBusinessMetricsAPI.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Ricky\source\repos\EtsyBusinessMetricsAPI\EtsyBusinessMetricsAPI\obj\Debug\net5.0\EtsyBusinessMetricsAPI.AssemblyInfoInputs.cache
 C:\Users\Ricky\source\repos\EtsyBusinessMetricsAPI\EtsyBusinessMetricsAPI\obj\Debug\net5.0\EtsyBusinessMetricsAPI.AssemblyInfo.cs
@@ -67,4 +68,3 @@ C:\Users\cerny\DevelopmentProjects\EtsyBusinessMetricsAPI\EtsyBusinessMetricsAPI
 C:\Users\cerny\DevelopmentProjects\EtsyBusinessMetricsAPI\EtsyBusinessMetricsAPI\obj\Debug\net5.0\ref\EtsyBusinessMetricsAPI.dll
 C:\Users\cerny\DevelopmentProjects\EtsyBusinessMetricsAPI\EtsyBusinessMetricsAPI\obj\Debug\net5.0\EtsyBusinessMetricsAPI.pdb
 C:\Users\cerny\DevelopmentProjects\EtsyBusinessMetricsAPI\EtsyBusinessMetricsAPI\obj\Debug\net5.0\EtsyBusinessMetricsAPI.genruntimeconfig.cache
-C:\Users\Ricky\source\repos\EtsyBusinessMetricsAPI\EtsyBusinessMetricsAPI\obj\Debug\net5.0\EtsyBusinessMetricsAPI.csprojAssemblyReference.cache
