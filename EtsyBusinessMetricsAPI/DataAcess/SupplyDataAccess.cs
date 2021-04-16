@@ -8,7 +8,7 @@ namespace EtsyBusinessMetricsAPI.DataAcess
 {
     public class SupplyDataAccess : ISupplyDataAccess
     {
-        List<Supply> supplies = new List<Supply>();
+
         private readonly string connectionString;
         public SupplyDataAccess(string connectionString)
         {
@@ -17,6 +17,7 @@ namespace EtsyBusinessMetricsAPI.DataAcess
 
         public List<Supply> GetAllSupplies()
         {
+            List<Supply> supplies = new List<Supply>();
             const string query = @"SELECT * FROM Supply";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -37,6 +38,22 @@ namespace EtsyBusinessMetricsAPI.DataAcess
 
         public int GetSupplyCount()
         {
+            List<Supply> supplies = new List<Supply>();
+            const string query = @"SELECT * FROM Supply";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader rdr = cmd.ExecuteReader();
+
+                while (rdr.Read())
+                {
+                    supplies.Add(SupplyDataAdapter(rdr));
+                }
+            }
+
             return supplies.Count();
         }
 

@@ -1,6 +1,7 @@
 ﻿using EtsyBusinessMetricsAPI.DataAcess;
 using EtsyBusinessMetricsAPI.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -13,10 +14,12 @@ namespace EtsyBusinessMetricsAPI.Controllers
     {
         private ISaleDataAcess saleDataAcess;
         private IPurchaseDataAccess purchaseDataAccess;
-        public HomeController(ISaleDataAcess saleDataAccess, IPurchaseDataAccess purchaseDataAccess)
+        private readonly IConfiguration _configuration;
+        public HomeController(ISaleDataAcess saleDataAccess, IPurchaseDataAccess purchaseDataAccess, IConfiguration configuration)
         {
             this.saleDataAcess = saleDataAccess;
             this.purchaseDataAccess = purchaseDataAccess;
+            _configuration = configuration;
         }
 
         /// <summary>
@@ -27,6 +30,15 @@ namespace EtsyBusinessMetricsAPI.Controllers
         public decimal GetTotalSales()
         {
             return saleDataAcess.GetSumOfSales();
+        }
+        /// <summary>
+        /// Get the API key 
+        /// </summary>
+        /// <returns>The API key</returns>
+        [HttpGet("Api")]
+        public string GetApiKey()
+        {
+            return _configuration.GetSection("EtsyApi:Key").Value;
         }
 
         /// <summary>
