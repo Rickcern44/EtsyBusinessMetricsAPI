@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {
+    "net6.0": {
       "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
         "type": "package",
         "build": {
@@ -52,6 +52,15 @@
             "assetType": "runtime",
             "rid": "win"
           }
+        }
+      },
+      "RestSharp/107.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RestSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/RestSharp.dll": {}
         }
       },
       "runtime.native.System.Data.SqlClient.sni/4.7.0": {
@@ -314,6 +323,24 @@
         "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.xml",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "RestSharp/107.3.0": {
+      "sha512": "qu+A+VAnVLX3OeWVNm11UJz0aVErqSfYqIiOUbJM9x98uLymCOoL/oXRAjMb6XHra27WXxHmzy9EKEOKXWR6Pw==",
+      "type": "package",
+      "path": "restsharp/107.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net5.0/RestSharp.dll",
+        "lib/net5.0/RestSharp.xml",
+        "lib/net6.0/RestSharp.dll",
+        "lib/net6.0/RestSharp.xml",
+        "lib/netstandard2.0/RestSharp.dll",
+        "lib/netstandard2.0/RestSharp.xml",
+        "restsharp.107.3.0.nupkg.sha512",
+        "restsharp.nuspec",
+        "restsharp.png"
       ]
     },
     "runtime.native.System.Data.SqlClient.sni/4.7.0": {
@@ -630,7 +657,8 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net5.0": [
+    "net6.0": [
+      "RestSharp >= 107.3.0",
       "Swashbuckle.AspNetCore >= 5.6.3",
       "System.Data.SqlClient >= 4.8.2"
     ]
@@ -660,7 +688,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net5.0"
+        "net6.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -668,8 +696,8 @@
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "projectReferences": {}
         }
       },
@@ -680,9 +708,13 @@
       }
     },
     "frameworks": {
-      "net5.0": {
-        "targetAlias": "net5.0",
+      "net6.0": {
+        "targetAlias": "net6.0",
         "dependencies": {
+          "RestSharp": {
+            "target": "Package",
+            "version": "[107.3.0, )"
+          },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[5.6.3, )"
