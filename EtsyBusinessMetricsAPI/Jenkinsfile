@@ -12,15 +12,15 @@ pipeline {
                 sh(script: "dotnet build /var/lib/jenkins/workspace/EtsyBusinessMetricsAPI_dev/EtsyBusinessMetricsAPI.sln", returnStdout: true)
             }
         }
-        stage('Publish Artifact') {
-            steps {
-                echo 'Publishing Atrifact..'
-            }
-        }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
             }
+        }
+    }
+    post {
+        always {
+            archiveArtifacts artifacts: '**/*.dll.*', onlyIfSuccessful: true
         }
     }
 }
