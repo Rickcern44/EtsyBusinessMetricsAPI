@@ -4,7 +4,6 @@
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
                 sh(script: "dotnet restore",returnStdout: true, returnstdErr: true )
             }
         }
