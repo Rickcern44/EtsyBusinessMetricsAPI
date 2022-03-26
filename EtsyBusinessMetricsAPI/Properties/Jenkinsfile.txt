@@ -5,6 +5,7 @@
         stage('Build') {
             steps {
                 sh(script: "dotnet restore",returnStdout: true, returnstdErr: true )
+                bat 'nuget.restore'
             }
         }
         stage('Test') {
