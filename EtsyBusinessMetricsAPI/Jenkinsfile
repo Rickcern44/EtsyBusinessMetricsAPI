@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh(script: "dotnet build /var/lib/jenkins/workspace/EtsyBusinessMetricsAPI_dev/EtsyBusinessMetricsAPI.sln", returnStdout: true)
+                sh(script: "dotnet publish /var/lib/jenkins/workspace/EtsyBusinessMetricsAPI_dev/EtsyBusinessMetricsAPI.sln", returnStdout: true)
             }
         }
         stage('Deploy') {
@@ -20,7 +20,7 @@ pipeline {
     }
     post {
         always {
-            archiveArtifacts artifacts: 'testArtifatc.txt', onlyIfSuccessful: true
+            archiveArtifacts artifacts: '/var/lib/jenkins/workspace/EtsyBusinessMetricsAPI_dev/', onlyIfSuccessful: true
         }
     }
 }
