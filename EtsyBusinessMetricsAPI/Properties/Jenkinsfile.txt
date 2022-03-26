@@ -2,12 +2,10 @@
     agent any
 
     stages {
-        stage('Checkout git repo') {
-            git branch: 'master', url: https://github.com/Rickcern44/EtsyBusinessMetricsAPI
-        }
         stage('Build') {
             steps {
                 echo 'Building..'
+                sh(script: "dotnet restore" )
             }
         }
         stage('Test') {
