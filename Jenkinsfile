@@ -11,6 +11,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh(script: "dotnet restore", returnStdout: true)
+                sh(script: "dotnet build", returnStdout: true)
             }
         }
         stage('Test') {
