@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                echo 'Building..'
+                sh(script: "dotnet restore", returnStdout: true)
             }
         }
         stage('Test') {
