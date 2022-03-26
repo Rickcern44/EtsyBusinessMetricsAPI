@@ -2,12 +2,11 @@ pipeline {
     agent any
 
     stages {
-        stage('Restore Nuget') {
+        stage('Nuget Restore') {
             steps {
                 echo 'Restoring Nuget Packages...'
-                dir('.nuget'){
-                    bat 'NuGet.exe restore' 
-                }
+                nuget restore
+                echo 'Nuget Pakages Restored
             }
         }
         stage('Build') {
