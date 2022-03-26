@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Restoring Nuget Packages...'
                 nuget restore
-                echo 'Nuget Pakages Restored
+                echo 'Nuget Pakages Restored'
             }
         }
         stage('Build') {
