@@ -2,15 +2,19 @@ pipeline {
     agent any
 
     stages {
+       stage('NuGet Restore') {
+            steps {
+                sh(script: "nuget restore /var/lib/jenkins/workspace/EtsyBusinessMetricsAPI_dev/EtsyBusinessMetricsAPI.sln", returnStdout: true)
+            }
+        }
         stage('Build') {
             steps {
-                sh(script: "dotnet restore", returnStdout: true)
                 sh(script: "dotnet build /var/lib/jenkins/workspace/EtsyBusinessMetricsAPI_dev/EtsyBusinessMetricsAPI.sln", returnStdout: true)
             }
         }
-        stage('Test') {
+        stage('Publish Artifact') {
             steps {
-                echo 'Testing..'
+                echo 'Publishing Atrifact..'
             }
         }
         stage('Deploy') {
