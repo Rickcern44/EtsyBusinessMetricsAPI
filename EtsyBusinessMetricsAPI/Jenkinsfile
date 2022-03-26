@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh(script: "dotnet publish /var/lib/jenkins/workspace/EtsyBusinessMetricsAPI_dev/EtsyBusinessMetricsAPI.sln", returnStdout: true)
+                sh(script: "dotnet publish --configuration Release /var/lib/jenkins/workspace/EtsyBusinessMetricsAPI_dev/EtsyBusinessMetricsAPI.sln", 
+                returnStdout: true)
             }
         }
         stage('Deploy') {
