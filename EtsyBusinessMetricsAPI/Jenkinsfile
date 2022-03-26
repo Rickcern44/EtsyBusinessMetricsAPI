@@ -15,7 +15,7 @@ pipeline {
     }
     post {
         always {
-            archiveArtifacts artifacts: '/var/lib/jenkins/workspace/EtsyBusinessMetricsAPI_dev/bin/Release/net6.0/*.exe', 
+            archiveArtifacts artifacts: '/var/lib/jenkins/workspace/EtsyBusinessMetricsAPI_dev/EtsyBusinessMetricsAPI/bin/Release/net6.0/*.exe',
             onlyIfSuccessful: true
             cleanWs()
         }
