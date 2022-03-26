@@ -2,12 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage ('Clean Workspace'){
-            steps{
-                echo 'Cleaning...'
-                cleanWs()
-            }
-        }
         stage('Build') {
             steps {
                 sh(script: "dotnet restore", returnStdout: true)
