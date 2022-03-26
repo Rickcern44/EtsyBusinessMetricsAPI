@@ -2,11 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('Nuget Restore') {
-            steps {
-                echo 'Restoring Nuget Packages...'
-                nuget restore
-                echo 'Nuget Pakages Restored'
+        stage ('Clean Workspace'){
+            steps{
+                echo 'Cleaning...'
+                cleanWs()
             }
         }
         stage('Build') {
