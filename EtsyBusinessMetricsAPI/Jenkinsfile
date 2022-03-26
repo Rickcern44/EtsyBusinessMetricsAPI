@@ -20,7 +20,7 @@ pipeline {
     }
     post {
         always {
-            archiveArtifacts artifacts: '**/*.dll.*', onlyIfSuccessful: true
+            archiveArtifacts artifacts: 'testArtifatc.txt', onlyIfSuccessful: true
         }
     }
 }
